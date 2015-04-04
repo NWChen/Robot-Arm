@@ -8,4 +8,4 @@ Currently the control system is based on:
 	- We'd like to avoid Jaguars because of their frequency issues with window motors, and their PWM input issues (especially with Arduino)
 - Copious amounts of turnpots and servos
 
-There's a possibility of including relays or manual switches for use with an electromagnet.
+There's a possibility of including relays or manual switches for use with an electromagnet. Alternatively, a strong ferromagnet can be used, and the same actuator used for gripping/intaking can be used to "push" an object attracted to the magnet off.
