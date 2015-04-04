@@ -8,3 +8,5 @@ This is a large, low-cost teleoperated robotic arm. Our group consists of:
 - Annie Chu (Freshman)
 - Christopher E (Senior)
 - Neil Chen (Senior)
+
+~[](http://i.gyazo.com/805d326254ae9f81fbe6eaeb527e3337.png)
