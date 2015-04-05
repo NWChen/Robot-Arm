@@ -8,3 +8,8 @@ This is a large, low-cost teleoperated robotic arm. Our group consists of:
 - Annie Chu (Freshman)
 - Christopher E (Senior)
 - Neil Chen (Senior)
+
+Thanks to:
+
+- Jan Pazhayampallil (Senior) for SolidWorks help
+- [Society of Robots](http://www.societyofrobots.com/) for great guides
