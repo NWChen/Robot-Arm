@@ -11,5 +11,5 @@ This is a large, low-cost teleoperated robotic arm. Our group consists of:
 
 Thanks to:
 
-- Jan Pazhayampallil (Senior) for SolidWorks help
+- Jan Pazhayampallil (Senior) for design help
 - [Society of Robots](http://www.societyofrobots.com/) for great guides
