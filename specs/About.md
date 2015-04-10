@@ -6,6 +6,7 @@ Currently the control system is based on:
 - 12V SLA Battery
 - Victor 884/Victor 888/Talon SR/any other 20A+ DC motor controller
 	- We'd like to avoid Jaguars because of their frequency issues with window motors, and their PWM input issues (especially with Arduino)
+	- HOPEFULLY!
 - Copious amounts of turnpots and servos
 
 There's a possibility of including relays or manual switches for use with an electromagnet. Alternatively, a strong ferromagnet can be used, and the same actuator used for gripping/intaking can be used to "push" an object attracted to the magnet off.
