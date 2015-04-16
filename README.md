@@ -12,4 +12,5 @@ This is a large, low-cost teleoperated robotic arm. Our group consists of:
 Thanks to:
 
 - Jan Pazhayampallil (Senior) for design help
+- FRC Team 2601/Steel Hawks for some hardware
 - [Society of Robots](http://www.societyofrobots.com/) for great guides
