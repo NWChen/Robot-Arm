@@ -9,7 +9,7 @@ This is a large, low-cost teleoperated robotic arm. Our group consists of:
 - Christopher E (Senior)
 - Neil Chen (Senior)
 
-We are also mentoring a second THHS Robot Arm group:
+We are also mentoring a second THHS Robot Arm group, which is pursuing a servo-based SCARA design:
 
 - Amanda Tran (Senior)
 - Saloni Vishwakarma (Senior)
