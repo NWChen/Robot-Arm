@@ -6,3 +6,5 @@
 *.igs
 *.jpg
 *.png
+~$*.sldprt
+~$*.sldasm
