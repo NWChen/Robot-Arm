@@ -1,30 +1,54 @@
-const int k_pBase = A0;
-const int k_pShoulder = A1;
-const int k_pElbow = A2;
+#include <Servo.h>
 
-const int k_vBase = 11;
+const int k_pBase = A3;
+const int k_pShoulder = A4;
+const int k_pElbow = A5;
+
+
+const int k_vBase = 9;
 const int k_vShoulder = 10;
-const int k_vElbow = 9;
+const int k_vElbow = 11;
 
-int pBase, pShoulder, pElbow,
-    vBase, vShoulder, vElbow;
+Servo vBase, vShoulder, vElbow;
+
+int pBase, pShoulder, pElbow;
+float i=0;
 
 void setup() {
   Serial.begin(9600);
+  vBase.attach(k_vBase);
+  vShoulder.attach(k_vShoulder);
+  vElbow.attach(k_vElbow);
 }
 
 void loop() {
+  
   pBase = analogRead(k_pBase);
   pShoulder = analogRead(k_pShoulder);
   pElbow = analogRead(k_pElbow);
-
-  Serial.print("base=");
+  
   Serial.print(pBase);
-  Serial.print(", shoulder=");
+  Serial.print(", ");
   Serial.print(pShoulder);
-  Serial.print(", elbow=");
-  Serial.println(pElbow);
-
+  Serial.print(", ");
+  Serial.print(pElbow);
+  Serial.println();
+  
+  vBase.write(map(pBase, 0, 1023, 70, 110));
+  vShoulder.write(map(pElbow, 0, 1023, 70, 110));
+  
   delay(100);
+  
+  /*
+  i += 0.1;
+  vBase.write(90*(sin(i)+1));
+  Serial.print(sin(i));
+  Serial.print(" ");
+  Serial.println(vBase.read());
+  delay(100);
+  */
 }
+    
+
+
 
