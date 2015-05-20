@@ -34,8 +34,8 @@ void loop() {
   Serial.print(pElbow);
   Serial.println();
   
-  vBase.write(map(pBase, 0, 1023, 70, 110));
-  vShoulder.write(map(pElbow, 0, 1023, 70, 110));
+  //vBase.write(map(pBase, 0, 1023, 70, 110));
+  vShoulder.write(map(pShoulder, 300, 1000, 70, 110));
   
   delay(100);
   
