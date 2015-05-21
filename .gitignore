@@ -8,3 +8,5 @@
 *.png
 ~$*.sldprt
 ~$*.sldasm
+*.stp
+*.err
