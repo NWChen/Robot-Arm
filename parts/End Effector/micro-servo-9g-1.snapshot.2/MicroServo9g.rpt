@@ -1,0 +1,68 @@
+*****************************************************************
+      SolidWorks Corporation - IGES Processor Status Report
+*****************************************************************
+=================================================================
+General Information
+=================================================================
+Sending System Product I.D.  : MicroServo9g
+Receiving System Product I.D.: 
+File Name                    : MicroServo9g
+Sending System               : unknown
+Preprocessor Version         : unknown
+File Creation Date           : 20130804.134123
+Model Creation Date          : 
+Units                        : CM
+Model Space Scale            : 1
+Author                       : unknown
+Organization                 : unknown
+
+
+=================================================================
+Entity Processing Information
+=================================================================
+
+
+=================================================================
+Precision analysis of IGES file:
+=================================================================
+  Most prevalent number of significant digits:               3
+  Highest number of significant digits:                      3
+  Average number of significant digits:                 2.6747
+  Maximum distance to origin:                          1.75704
+  Minimum distance to origin:                          1.17593
+  Effective number of significant digits:              2.29696
+
+
+=================================================================
+Entity Summary
+=================================================================
+-----------------------------------------------------------------
+Type Name                                         Count Converted
+---- ----                                         ----- ---------
+124  Transformation matrix                            1         1
+126  Rational B-spline curve                        305       305
+128  Rational B-spline surface                      135       135
+186  Manifold Solid B-rep Object                      4         4
+308  Subfigure definition                             1         1
+406  Property                                         3         3
+408  Singular subfigure instance                      1         1
+502  Vertex list                                      4         4
+504  Edge entity                                      4         4
+508  Loop entity                                    165       165
+510  Face entity                                    135       135
+514  Shell entity                                     4         4
+_________________________________________________________________
+
+
+=================================================================
+Result Summary
+=================================================================
+SolidWorks Feature Type                Count
+-----------------------                -----
+Solid feature(s)                       4
+Surface feature(s)                     0
+Curve/Sketch feature(s)                0
+--------------------------------------------
+Start time: Wednesday, May 27, 2015 14:51:29
+Finish time: Wednesday, May 27, 2015 14:51:36
+Processing time: 0 days, 00 hours, 00 mins, 07 secs
