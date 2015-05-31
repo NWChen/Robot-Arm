@@ -1,13 +1,12 @@
 #include <Arduino.h>
 #include <Controller.h>
-#include <string>
 
 double startTime; //time at which a motor should start moving
 double endTime; //time at which a motor should stop moving
 int previous; //previous potentiometer value
 int current; //current potentiometer value
 int setValue; //distance from 90
-boolean finished;
+bool finished;
 
 //constructor
 Controller::Controller(){
@@ -32,8 +31,6 @@ int Controller::update(double t){ //current time
 }
 
 //output controller information
-string Controller:toString(){
-  std::stringstream s;
-  s << startTime << ":" endTime << ", " << previous << ":" << current << ", " << setValue;
-  return s.str();
+String Controller::toString(){
+  return String(startTime) + ", " + String(endTime) + ", " + String(previous) + ", " + String(current) + ", " + String(setValue);
 }
