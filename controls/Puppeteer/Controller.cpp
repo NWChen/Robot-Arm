@@ -19,7 +19,7 @@ Controller::Controller(){
 //watch time and schedule actions
 int Controller::update(double t){ //current time
   endTime = startTime + 10 * abs(current-previous);
-  if(t==endTime || current-previous==0){
+  if(t==endTime ||abs(current-previous)<=1){
     setValue = 0;
     finished = true;
   }
