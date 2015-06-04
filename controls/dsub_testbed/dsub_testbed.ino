@@ -6,7 +6,7 @@ const int k_pShoulder = A3;
 const int k_pWrist = A2;
 const int k_pGripper = A1;
 
-const int vBase = 8;
+const int vBase = 9;
 int previous = 0, current = 0;
 float k = 1;
 int t = 0;

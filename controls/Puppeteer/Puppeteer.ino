@@ -15,14 +15,16 @@
 
 #define STOPVALUE 90
 
-float time;
+int time;
 Controller base;
 Controller shoulder;
 Controller elbow;
-Controller controllers[] = {base, shoulder, elbow};
-int potentiometers[] = {P_BASE, P_SHOULDER, P_ELBOW, P_WRIST, P_GRIPPER};
+Controller controllers[3] = {base, shoulder, elbow};
+Servo victors[3] = {};
+int potentiometers[5] = {P_BASE, P_SHOULDER, P_ELBOW, P_WRIST, P_GRIPPER};
 
 void setup(){
+  Serial.begin(9600);
   Servo vbase;
   Servo vshoulder;
   Servo velbow;
@@ -35,23 +37,32 @@ void setup(){
   shoulder = Controller();
   elbow = Controller();  
   time = 0;
+  victors[0] = vbase;
+  victors[1] = vshoulder;
+  victors[2] = velbow;
 }
 
 void loop(){
   time = millis();
   for(int i=0; i<3; i++){
-    controllers[i].update(time);
-    if(controllers[i].finished){
-      controllers[i].previous = analogRead(potentiometers[i]);
-      if(hasElapsed(time, 20)){
-        time = millis();
-        controllers[i].current = time;
-        controllers[i].startTime = time; 
-      }
+    victors[0].write(STOPVALUE + controllers[i].watch(time));
+    
+    int previous = analogRead(potentiometers[i]);
+    delay(20);
+    int current = analogRead(potentiometers[i]);
+    
+    time = millis();
+    controllers[i].watch(time);
+    
+    if(controllers[i].finished && abs(current-previous)>2){
+      controllers[i].previous = previous;
+      controllers[i].current = current;
+      controllers[i].startTime = time; 
     }
-    Serial.println(controllers[i].toString());
+    
+    Serial.println(controllers[0].toString());
   }
-  Serial.println(" - - - ");
+  //Serial.println(" - - - ");
 }
 
 //wait for a time period in ms
@@ -59,5 +70,6 @@ boolean hasElapsed(int startTime, int duration){
   if(millis()==startTime + duration) return true;
   return false;
 }
+
 
 
