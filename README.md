@@ -5,8 +5,7 @@ TODO
 - end effector
 - shoulder PID
 - elbow servo holes
-- servo control code
-- shoulder potentiometer mounting and wiring
+- shoulder potentiometer wiring
 
 This is a large, low-cost teleoperated robotic arm. Our group consists of:
 
