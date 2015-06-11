@@ -35,15 +35,15 @@ int pWrist = 0;
 int pGripper = 0;
 const int pTolerance = 4;
 #define k_baseNeutral 90
-const float k_baseCCW = 2.2; //>90 = clockwise, usually greater than CCW offset
+const float k_baseCCW = 2.5; //>90 = clockwise, usually greater than CCW offset
 const float k_baseCW = -1.2; //<90 = counterclockwise
 const float k_baseSpeed = 8;
 #define k_shoulderNeutral 90
 const float k_shoulderCW = 2.2; //<90 = clockwise when facing hub
 const float k_shoulderCCW = -1; //>90 = counterclockwise when facing hub, usually greater than CW offset
-const float k_shoulderSpeed = 7;
+const float k_shoulderSpeed = 6;
 #define k_gripperNeutral 90
-const float k_gripperSpeed = 30;
+const float k_gripperSpeed = 60;
 
 /*
 //PID
@@ -73,14 +73,15 @@ void loop() {
   pShoulder = map(analogRead(k_pShoulder), 60, 800, 0, 200);
   pElbow = map(analogRead(k_pElbow), 0, 850, 0, 180);
   pWrist = map(analogRead(k_pWrist), 300, 1023, 180, 0);
-  pGripper = map(analogRead(k_pGripper), 0, 1023, 0, 200);
+  //pGripper = map(analogRead(k_pGripper), 0, 1023, 0, 200);
+  pGripper = analogRead(k_pGripper);
   sShoulder = map(analogRead(k_sShoulder), 400, 1023, 0, 200);
-  /*
-  if(pBase > pos_mBase){
+  
+  if(pBase > pos_mBase+pTolerance){
     base.write(k_baseNeutral + k_baseCW*k_baseSpeed);
     pos_mBase += dk_Base;
   }
-  else if(pBase < pos_mBase){
+  else if(pBase < pos_mBase-pTolerance){
     base.write(k_baseNeutral + k_baseCCW*k_baseSpeed);
     pos_mBase += -dk_Base;
   }
@@ -95,10 +96,10 @@ void loop() {
   
   elbow.write(pElbow);
   wrist.write(pWrist);
-  */
-  if(pGripper > 180) gripper.write(k_gripperNeutral + k_gripperSpeed);
-  else if(pGripper < 20) gripper.write(k_gripperNeutral - k_gripperSpeed);
-  gripper.write(k_gripperNeutral);
+  
+  if(pGripper > 900) gripper.write(k_gripperNeutral + k_gripperSpeed);
+  else if(pGripper < 200) gripper.write(k_gripperNeutral - k_gripperSpeed);
+  else gripper.write(k_gripperNeutral);
   
   Serial.println(String(analogRead(k_pShoulder)) + ", " + String(analogRead(k_sShoulder)) + ", " + String(pShoulder) + ", " + String(sShoulder) + ", " + String(shoulder.read()));
   //Serial.println(String(pShoulder) + ", " + String(sShoulder) + ", " + String(pid(pShoulder, sShoulder)));
