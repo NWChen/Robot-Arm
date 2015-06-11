@@ -72,20 +72,20 @@ void loop() {
   pBase = map(analogRead(k_pBase), 0, 1023, 0, 200);
   pShoulder = int(map(analogRead(k_pShoulder), 35, 770, 0, 200));
   pElbow = map(analogRead(k_pElbow), 0, 850, 0, 180);
-  //pWrist = map(analogRead(k_pWrist), 0, 
+  pWrist = map(analogRead(k_pWrist), 300, 1023, 180, 0);
   pGripper = map(analogRead(k_pGripper), 0, 1023, 0, 200);
   sShoulder = int(map(analogRead(k_sShoulder), 330, 1023, 0, 200));
   
   if(pBase > pos_mBase){
-    base.write(k_baseNeutral + k_baseCW*k_baseSpeed);
+    //base.write(k_baseNeutral + k_baseCW*k_baseSpeed);
     pos_mBase += dk_Base;
   }
   else if(pBase < pos_mBase){
-    base.write(k_baseNeutral + k_baseCCW*k_baseSpeed);
+    //base.write(k_baseNeutral + k_baseCCW*k_baseSpeed);
     pos_mBase += -dk_Base;
   }
   else{
-    base.write(k_baseNeutral);
+    //base.write(k_baseNeutral);
   }
   
   //lower value = forward/clockwise, higher value = backward/counterclockwise
