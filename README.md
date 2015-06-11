@@ -13,5 +13,4 @@ Thanks to:
 - FRC Team 2601/Steel Hawks for some hardware
 - [Society of Robots](http://www.societyofrobots.com/) for great guides
 
-![](http://i.gyazo.com/04f37c1863391bedf5889a74ed2707da.jpg)
 ![](https://lh3.googleusercontent.com/LboMzr8kVu8DQA_O-qUNXP6zbVs1CnPLtHWcEuuJtoIY=w807-h1075-no)
