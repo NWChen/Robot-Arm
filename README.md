@@ -1,12 +1,6 @@
 # rooney
 SciOly Robot Arm 2012/2013/2016 (Tentative)
 
-TODO
-- end effector
-- shoulder PID
-- elbow servo holes
-- shoulder potentiometer wiring
-
 This is a large, low-cost teleoperated robotic arm. Our group consists of:
 
 - Annie Chu (Freshman)
